@@ -1,8 +1,11 @@
 package com.jatin.controller;
 
+import com.jatin.model.Student;
 import com.jatin.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class StudentController {
@@ -10,7 +13,7 @@ public class StudentController {
     StudentService service;
 
     @GetMapping("/students")
-    public String getStudents() {
+    public List<Student> getStudents() {
         return service.getStudents();
     }
 
@@ -19,9 +22,9 @@ public class StudentController {
         return ""+studentId;
     }
 
-    @PostMapping
-    public void createStudent() {
-
+    @PostMapping("/students")
+    public void createStudent(Student student) {
+        System.out.println(student);
     }
 
 }

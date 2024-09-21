@@ -23,8 +23,8 @@ public class StudentController {
     }
 
     @PostMapping("/students")
-    public void createStudent(Student student) {
-        System.out.println(student);
+    public String createStudent(@RequestBody Student student) {
+        return service.createStudent(student);
     }
 
 }

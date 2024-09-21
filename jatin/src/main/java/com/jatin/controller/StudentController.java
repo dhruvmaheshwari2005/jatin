@@ -36,5 +36,4 @@ public class StudentController {
  * 2. Post: insert the data in the DB
  * 3. Put: update the existing data
  * 4. Delete: delete the data
- *
  */

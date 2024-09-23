@@ -2,17 +2,26 @@ package com.jatin.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Student {
     @Id
-    int studentId;
+    int id;
+
     String name;
 
     @Override
     public String toString() {
         return "Student{" +
-                "studentId=" + studentId +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
     }
